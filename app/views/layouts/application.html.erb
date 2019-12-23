@@ -4,6 +4,10 @@
     <title>Sluglife</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Limelight|Shrikhand&display=swap');
+    </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
@@ -14,7 +18,7 @@
 
 
     <!-- calls show.html.erb  -->
-    <body class="<%= yield (:body_class) %>">
+    <body class = "<%= yield (:body_class) %>">
       <% if flash[:notice] %>
         <div class="notification is-success global-notification">
           <p class="notice"><%= notice %></p>
@@ -28,7 +32,9 @@
        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <%= link_to root_path, class:"navbar-item" do %>
-            <h1 class="title is-5">SlugLife</h1>
+            <div class="titlesluglife">
+            <h1 class="title is-5">Unofficial Bookstore</h1>
+            </div>
           <% end  %>
         <div class="navbar-burger burger" data-target="navbar">
           <span></span>
@@ -85,8 +91,13 @@
     <div class="container">
 
       <%= yield %>
-
     </div>
+    <div class="wallpaper-left"></div>
+    <div class="wallpaper-right"></div>
+
+    <%= yield(:footer) %>
+
+
 
     </body>
   </html>
