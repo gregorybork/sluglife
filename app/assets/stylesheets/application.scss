@@ -21,25 +21,37 @@
 
 .navbar {
   height: 6rem;
+  overflow: auto;
+  white-space:nowrap;
 }
 .navbar-brand{
-  padding: 2rem 0rem 2rem 5rem;
-  float: none;
   position: absolute;
+  left: 50%;
   top: 50%;
-  left: 43%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
 
 }
 .navbar-burger {
-  position: relative;
+
+
 }
+.title.is-5 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 22px;
+  color: #dba709;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 600px) {
 //navbar Title
 .title.is-5 {
   font-family: 'Shrikhand', cursive;
   font-size: 2rem;
   color: #dba709;
   letter-spacing: 2px;
+}
 }
 //navbar full bar
 .navbar.is-warning {
@@ -82,8 +94,9 @@ a {
 
 
 .wallpaper-left {
-    background: transparent url(demo.jpg) no-repeat scroll 0% 0%;
+    background-image: url(censoredtitty.gif) ;
     background-position: center center;
+    background-size: cover;
     background-repeat:  no-repeat;
     top: 0;
     left: 0;
@@ -93,8 +106,9 @@ a {
 }
 
 .wallpaper-right {
-    background: transparent url(demo.jpg) no-repeat scroll 0% 0%;
+    background-image: url(eightballgif.gif);
     background-position: center center;
+    background-size: cover;
     background-repeat:  no-repeat;
     top: 0;
     left: 0;
@@ -109,10 +123,44 @@ a {
 .container{
   background-color: #4a5b75;
 }
+.title.is-2 {
+  font-size: 2rem;
+  color: #dba709;
+  letter-spacing: 2px;
+}
+.inline-block {
+  font-size: 1rem;
+  color: #dba709;
+}
 
+//cart page
+.button {
+  background-color: #dba709;
+  border-color: #4a4a4a;
+}
+strong {
+  color: #dba709;
+}
+.content {
+  color: #dba709;
+}
+span.f5.has-text-grey {
+  color: #dba709 !important;
+}
+
+.title.is-4 {
+  color: #dba709;
+}
 
 
 //footer
+.button.is-warning {
+  background-color: #dba709;
+}
+.button.is-danger {
+  background-color: #dba709;
+  color: #363636;
+}
 .columns{
   padding-top: 3rem;
 }
