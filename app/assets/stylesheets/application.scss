@@ -1,0 +1,236 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import "bulma";
+@import "functions";
+
+
+.navbar {
+  height: 6rem;
+  overflow: auto;
+  white-space:nowrap;
+}
+.navbar-brand{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+
+}
+.navbar-burger {
+
+
+}
+.title.is-5 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 22px;
+  color: #dba709;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 600px) {
+//navbar Title
+.title.is-5 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 2rem;
+  color: #dba709;
+  letter-spacing: 2px;
+}
+}
+//navbar full bar
+.navbar.is-warning {
+  background-color: rgb(74, 91, 117);
+}
+
+.hero.is-warning{
+  background-color:rgba(74, 91, 117, .5);
+  padding: 0rem 0rem 0rem 0rem;
+
+}
+
+.hero.is-warning .title{
+  font-family: 'Satisfy', cursive;
+  color: #dba709;
+}
+body{
+  background-color: #4a5b75;
+}
+.bg-light{
+  background-color: #4a5b75;
+}
+
+.bg-img {
+       background-image: url(bookstore.gif) ;
+       background-position: center center;
+       background-repeat:  no-repeat;
+       background-attachment: fixed;
+       background-size:  cover;
+       background-color: #999;
+       padding-top: 500px;
+}
+.soldby {
+  color: #dba709;
+}
+
+a {
+  color: #dba709;
+}
+
+
+.wallpaper-left {
+    background-image: url(censoredtitty.gif) ;
+    background-position: center center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+
+.wallpaper-right {
+    background-image: url(eightballgif.gif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat:  no-repeat;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 500px;
+    margin-left: auto;
+    float: left;
+
+}
+
+//show page
+.container{
+  background-color: #4a5b75;
+}
+.title.is-2 {
+  font-size: 2rem;
+  color: #dba709;
+  letter-spacing: 2px;
+}
+.inline-block {
+  font-size: 1rem;
+  color: #dba709;
+}
+
+//cart page
+.button {
+  background-color: #dba709;
+  border-color: #4a4a4a;
+}
+strong {
+  color: #dba709;
+}
+.content {
+  color: #dba709;
+}
+span.f5.has-text-grey {
+  color: #dba709 !important;
+}
+
+.title.is-4 {
+  color: #dba709;
+}
+
+
+//footer
+.button.is-warning {
+  background-color: #dba709;
+}
+.button.is-danger {
+  background-color: #dba709;
+  color: #363636;
+}
+.columns{
+  padding-top: 3rem;
+}
+.footer {
+  background-color: #4a5b75;
+}
+.footer .support {
+  font-size: 1.3rem;
+  color: #dba709;
+}
+.footer .column {
+  color: #dba709;
+}
+
+
+//end footer
+
+
+.notification {
+  border-radius: 0;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+
+.instrument-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+
+
+  .instrument {
+    border-left: 0;
+    border-top: 0;
+
+    position: relative;
+    min-height: 375px;
+
+    .title {
+      line-height: 1.6rem;
+    }
+    .price {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+
+  .instrument-thumb {
+    position: relative;
+
+    max-height: 300px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    .condition {
+      position: absolute;
+      bottom: 10px;
+      right: 9px;
+    }
+  }
+}
