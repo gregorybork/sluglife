@@ -13,7 +13,7 @@ class ChargesController < ApplicationController
       :customer => customer.id,
       :amount => @amount,
       :description => 'Description (pack of five stickers)',
-      :currency: => 'usd',
+      :currency => 'usd',
     })
 
   rescue Stripe::CardError => e
