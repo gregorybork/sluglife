@@ -15,7 +15,7 @@ class InstrumentsTest < ApplicationSystemTestCase
     click_on "New Instrument"
 
     fill_in "Brand", with: @instrument.brand
-    fill_in "Condition", with: @instrument.condition
+    fill_in "Quality", with: @instrument.condition
     fill_in "Description", with: @instrument.description
     fill_in "Color", with: @instrument.finish
     fill_in "Creator/s", with: @instrument.model
@@ -32,7 +32,7 @@ class InstrumentsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Brand", with: @instrument.brand
-    fill_in "Condition", with: @instrument.condition
+    fill_in "Quality", with: @instrument.condition
     fill_in "Description", with: @instrument.description
     fill_in "Color", with: @instrument.finish
     fill_in "Creator/s", with: @instrument.model
