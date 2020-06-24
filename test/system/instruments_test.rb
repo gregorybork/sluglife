@@ -18,7 +18,7 @@ class InstrumentsTest < ApplicationSystemTestCase
     fill_in "Condition", with: @instrument.condition
     fill_in "Description", with: @instrument.description
     fill_in "Color", with: @instrument.finish
-    fill_in "Model", with: @instrument.model
+    fill_in "Creator/s", with: @instrument.model
     fill_in "Price", with: @instrument.price
     fill_in "Title", with: @instrument.title
     click_on "Create Instrument"
@@ -35,7 +35,7 @@ class InstrumentsTest < ApplicationSystemTestCase
     fill_in "Condition", with: @instrument.condition
     fill_in "Description", with: @instrument.description
     fill_in "Color", with: @instrument.finish
-    fill_in "Model", with: @instrument.model
+    fill_in "Creator/s", with: @instrument.model
     fill_in "Price", with: @instrument.price
     fill_in "Title", with: @instrument.title
     click_on "Update Instrument"
