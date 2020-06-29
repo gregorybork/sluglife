@@ -7,6 +7,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
       @import url('https://fonts.googleapis.com/css?family=Limelight|Shrikhand&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Shade&display=swap')
     </style>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,61 +30,72 @@
         <p class="alert"><%= alert %></p>
       </div>
       <% end %>
-       <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <%= link_to root_path, class:"navbar-item" do %>
-            <div class="titlesluglife">
-            <h1 class="title is-5">Unofficial Bookstore</h1>
-            </div>
-          <% end  %>
-        <div class="navbar-burger burger" data-target="navbar">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+
+
+    <!------------------------ navbar start -------------------------->
+    <nav class="navbar is-warning columns is-mobile is-multiline is-centered" role="navigation" aria-label="main navigation">
+    <!-------- Title  --------->
+      <div class="navbar-brand">
+        <%= link_to root_path, class:"navbar-item" do %>
+          <div class="titlesluglife">
+          <h1 class="title is-5">Unofficial Bookstore</h1>
+          </div>
+        <% end  %>
       </div>
+    <!-------- Title end --------->
 
-        <div id="navbar" class="navbar-menu">
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="field is-grouped">
 
-              <% if total_cart_items %>
-                  <%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
-                      <span class="icon is-small">
-                      <i class="fa fa-shopping-cart"></i>
-                      </span>
-                      <span>Cart
-                  <%= cart_count_over_one %>
+    <!-------- Sell & Acount & Cart --------->
+
+    <div id="navbar" class="columns is-mobile is-multiline is-centered">
+      <!-- puts items to the right -->
+      <!-- <div class="navbar-end"> -->
+      <!-- puts items to the right -->
+        <div class="navbar-item">
+          <div class="field is-grouped">
+
+            <% if total_cart_items %>
+                <%= link_to cart_path(@cart), class:"navbar-item button is-warning" do %>
+                    <span class="icon is-small">
+                    <i class="fa fa-shopping-cart"></i>
                     </span>
-                <% end %>
+                    <span>Cart
+                <%= cart_count_over_one %>
+                  </span>
               <% end %>
+            <% end %>
 
+            <!-- come with devise -->
+            <% if user_signed_in? %>
+              <%= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
 
+              <div class="navbar-item has-dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <%= link_to 'Account', edit_user_registration_path, class: "navbar-link", style: "color: white" %>
 
-              <!-- come with devise -->
-              <% if user_signed_in? %>
-                <%= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
+                    <div class="navbar-dropdown dropdown-menu is-right">
+                      <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
+                      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                    </div>
 
-                <div class="navbar-item has-dropdown is-hoverable">
-                  <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
-                  <div class="navbar-dropdown is-right">
-                    <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
-                  </div>
                 </div>
-              <% else %>
-
-              <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
-              <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-warning"%>
-
-              <% end %>
-
               </div>
+            <% else %>
+
+            <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-warning" %>
+            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button is-warning"%>
+
+            <% end %>
+
             </div>
           </div>
+          <!-- puts items to the right -->
+        <!-- </div> -->
+        <!-- puts items to the right -->
       </div>
+    <!-------- Sell & Acount & Cart End --------->
     </nav>
+    <!------------------------ navbar start -------------------------->
 
     <!-- creates header for selling page dynamically  -->
     <%= yield(:header) %>

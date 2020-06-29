@@ -8,7 +8,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: project_development
+  database: Sluger_development
   pool: 5
   username:
   password:
@@ -19,15 +19,15 @@ development:
 test: &TEST
   adapter: postgresql
   encoding: utf8
-  database: project_test
+  database: Sluger_test
   pool: 5
-  username: 
+  username:
   password:
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: project_production
+  database: Sluger_production
   pool: 5
   username:
   password:
