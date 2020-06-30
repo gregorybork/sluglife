@@ -7,7 +7,7 @@ class InstrumentsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit instruments_url
-    assert_selector "h1", text: "Instruments"
+    assert_selector "h1", text: "Instruments"ca
   end
 
   test "creating a Instrument" do

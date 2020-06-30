@@ -46,7 +46,7 @@
 
         <% if @instrument.brand %>
           <tr>
-            <td class="has-text-weight-bold">Brand:</td>
+            <td class="has-text-weight-bold">Type:</td>
             <td><%= @instrument.brand %></td>
           </tr>
         <% end %>
@@ -60,7 +60,7 @@
     </div>
     <div class="column is-3 is-offset-1">
       <div class="bg-white pa4 border-radius-3">
-        <h4 class="title is-5 has-text-centered"><%= number_to_currency(@instrument.price) %></h4>
+        <h4 style="font-size: 2rem" class="title is-5 has-text-centered"><%= number_to_currency(@instrument.price) %></h4>
         <p class="has-text-centered mb4">Sold by <%= @instrument.user.name %></p>
         <%= button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'button is-warning add-to-cart' %>
       </div>
