@@ -22,7 +22,7 @@
 
     <div class="instrument border-top border-light ">
       <div class="instrument-thumb">
-      <%= image_tag(@instrument.image_url(:default)) %>
+      <%= image_tag(instrument.instrument.image_url(:thumb)) %>
 
       <% if instrument.condition? %>
         <div class="condition">
