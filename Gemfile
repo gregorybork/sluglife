@@ -43,7 +43,7 @@ gem 'stripe'
 
 #aws s3
 gem "aws-sdk-s3", require: false
-gem 'figaro'
+gem 'figaro', require: false
 gem 'fog-aws'
 
 # Reduces boot times through caching; required in config/boot.rb
