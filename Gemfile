@@ -35,7 +35,7 @@ gem 'devise'
 gem 'gravatar_image_tag'
 # image upload service/generates different thumnails
 gem 'carrierwave', '~> 2.0'
-#
+gem 'carrierwave-aws'
 gem "mini_magick"
 
 #stripe checkout
