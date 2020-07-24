@@ -43,6 +43,8 @@ gem 'stripe'
 
 #aws s3
 gem "aws-sdk-s3", require: false
+gem 'figaro'
+gem 'fog-aws'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
