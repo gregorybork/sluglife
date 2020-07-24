@@ -40,7 +40,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   #for amazon s3 active storage
-  #config.active_storage.service = :amazon
+  config.active_storage.service = :amazon
 
 
   # Mount Action Cable outside main process or domain.
