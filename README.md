@@ -15,7 +15,8 @@ Users can:
 
 ## Demo
 
-![covid19_demo](https://user-images.githubusercontent.com/46305741/96385566-8ebd7d80-1149-11eb-97b7-32aa9bf17697.gif)
+![bookstore](https://user-images.githubusercontent.com/46305741/96518493-e29a9600-121f-11eb-8333-ce5dca23824d.gif)
+
 
 
 ## Technologies
