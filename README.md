@@ -1,24 +1,35 @@
-# README
+# Ruby on Rails Ecommerce App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Uses the Ruby on Rails framework to create a highly functional Ecommerce website
 
-Things you may want to cover:
+### [View Live](http://www.unofficialbookstore.com/)
 
-* Ruby version
+## Description
 
-* System dependencies
+The goal of this project was to help elevate school spirit at the University of California, Santa Cruz by creating more apparel and allowing others to submit ideas/designs to be added to the store.
 
-* Configuration
+Users can:
+  - Make an account
+  - Upload image designs and descriptions
+  - Securely purchase from a variety of apparel 
 
-* Database creation
+## Demo
 
-* Database initialization
+![covid19_demo](https://user-images.githubusercontent.com/46305741/96385566-8ebd7d80-1149-11eb-97b7-32aa9bf17697.gif)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies
 
-* Deployment instructions
+- Ruby on Rails
+- PostgreSQL
+- Carrierwave
+- Bootstrap
+- Devise
+- Stripe
+- AWS 
+- S3
+- HTML
+- CSS
+- Javascript
 
-* ...
+
